@@ -1,0 +1,34 @@
+COMPILADOR GERAL:
+
+- Pré-processador   => substitui os códigos dos #include/#declare pelas linhas correspondentes
+                       nele há apenas a declaração das funções usadas
+- Compilação        => transforma o código em Assembly e faz verificação de sintaxe, tipos e otimizações
+- Montagem/Assembler=> traduz o Assembly para código de máquina binária (processador entender via o SO) 
+- Linking           => pega o binário executável das funções nativas e "substitui" no local vazio delas
+
+
+COMO UTILIZAR O COMPILADOR EM C: ("Mais importantes")
+PARÂMETROS - ALERTAS - OTIMIZAÇÃO (Ordem de parâmetros adicionais)
+
+ -o (output, nome do arquivo final gerado)
+
+PARÂMETROS (Parada no processo de compilação
+ -E (PRÉ-PROCESSADOR | Código substituídos os #include e #define ===> arquivo.i)
+ -S (Código em Assembly ===> arquivo.s)
+ -C (Código binário puro sem linkar ===> arquivo.o)
+ -(nada) (Linker passo final do código) (posso passar o código objeto ou C direto)
+
+ALERTAS (Visualização de erros para melhorar a escrita do código)
+ -Wall   (Avisos opcionais aparecem)
+ -Wextra (Mais avisos opcionais)
+ -Werror (Avisos como tracebacks
+
+OTIMIZAÇÃO (Aumentar a velocidade de desempenho do código)
+
+-O0 (Padrão sem otimização === DEBUG)
+-O1 (Otimização leve === NORMAL)
+-O2 (Máximo sem alterar o tamanho do arquivo === PRODUÇÃO)
+-O3 (Melhor otimização, mas aumenta o tamanho do arquivo)
+-Os (Arquivo comprimido)
+
+
