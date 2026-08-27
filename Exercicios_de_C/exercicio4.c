@@ -1,4 +1,8 @@
-
+/* EXERCICIO 4
+TERMINAL DE AUTOATENDIMENTO 
+DE UMA LANCHONETE
+DESAFIO JÁ FEITO
+*/
 
 #include <stdio.h>
 
@@ -38,7 +42,7 @@ int main() {
                 } 
     } else {
 
-        printf("\n================== NOTA FISCAL ==================\n");
+        printf("\n============= NOTA FISCAL ============\n");
 
         switch (codigoProduto){
             case 1:
@@ -77,10 +81,10 @@ int main() {
         total = totalSemDesconto * desconto;
 
         printf("QUANTIDADE         === %d\n", quantidade);
-        printf("VALOR DOS PRODUTOS === %.2f\n", preco * quantidade);
-        printf("VALOR DA SOBREMESA === %.2f\n", sobremesaValor);
-        printf("DESCONTO           === %.2f\n", valorDescontado);
-        printf("VALOR FINAL        === %.2f\n", total);
+        printf("VALOR DOS PRODUTOS === R$ %.2f\n", preco * quantidade);
+        printf("VALOR DA SOBREMESA === R$ %.2f\n", sobremesaValor);
+        printf("DESCONTO           === R$ %.2f\n", valorDescontado);
+        printf("VALOR FINAL        === R$ %.2f\n", total);
     } 
  	return 0;
 }
