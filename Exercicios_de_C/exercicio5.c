@@ -40,7 +40,7 @@ int main(){
             if (saque > saldo) {
                 printf("Saldo Insuficiente!\n");
             }
-            saque = ((saque > 0) && (saque < saldo)) ? saque:0;
+            saque = ((saque > 0) && (saque <= saldo)) ? saque:0;
             saldo = saldo - saque;
             break;
         case 4:

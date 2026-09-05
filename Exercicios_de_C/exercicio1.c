@@ -27,14 +27,14 @@ int main(){
 	*/
 
     /* DESAFIO
-     0 & 1 = 0 ||| ~ -> 1 === PAR
-     1 & 1 = 1 ||| ~ -> 0 === NÃO PAR
+     0 | 0 = 0 === PAR
+     1 | 0 = 1 === IMPAR
     */
-    par1 = ~(aresta1 & 1);
-    par2 = ~(aresta2 & 1);
-    par3 = ~(aresta3 & 1);
+    impar1 = (aresta1 | 0);
+    impar2 = (aresta2 | 0);
+    impar3 = (aresta3 | 0);
 
-    if (par1 || par2 || par3) {
+    if !(impar1 && impar2 && impar3) {
         printf("\nPelo menos um dos lados do triângulo é par!\n"); 
     }
 
@@ -47,10 +47,13 @@ int main(){
 	if  ( !(negativo) && verificar1 && verificar2 && verificar3 ){
 	//É possível formar um triângulo
 
-		if ((aresta1 == aresta2) && (aresta1 == aresta3)) {
+		if ((aresta1 == aresta2) && (aresta1 == aresta3) && 
+            (aresta2 == aresta3)){
+
 		//EQUILÁTERO
 			printf("Os lados formam um triângulo equilátero\n");
-		} else if ((aresta1 != aresta2) && (aresta1 != aresta3)) {
+		} else if ((aresta1 != aresta2) && (aresta1 != aresta3) && 
+            (aresta2 != aresta3)){
 		//ESCALENO
 			printf("Os lados formam um triângulo escaleno\n");
 		} else {

@@ -24,9 +24,9 @@ int main(){
 		taxa = 1.20 * 1.15;
 	} else if (consumoKwh > 200) {
 		taxa = 1.20;
-	} else if ((101 < consumoKwh) && (consumoKwh < 200)) {
+	} else if ((101 <= consumoKwh) && (consumoKwh <= 200)) {
 		taxa = 0.75;
-	} else if ((0 < consumoKwh) && (consumoKwh < 100)) {
+	} else if ((0 <= consumoKwh) && (consumoKwh <= 100)) {
 		taxa = 0.50;
 	} else {
 		printf("Consumo Inválido\n");
@@ -38,7 +38,7 @@ int main(){
         if (multiplo8) {
             printf("\nSeu consumo de %dkwh é um número múltiplo de 8!!!\n", consumoKwh);
         } else {
-            printf("\nSeu consumo de %dkwn não é um número múltiplo de 8\n", consumoKwh); 
+            printf("\nSeu consumo de %dkwh não é um número múltiplo de 8\n", consumoKwh); 
         }
         
 		consumoReal = consumoKwh * taxa;

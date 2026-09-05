@@ -45,6 +45,7 @@ int main() {
         printf("\n============= NOTA FISCAL ============\n");
 
         switch (codigoProduto){
+            preco = 0; //Evitar warnings do compilador
             case 1:
                 preco = 18;
                 printf("PRODUTO ESCOLHIDO  === Hambúrguer\n");
@@ -71,7 +72,7 @@ int main() {
         totalSemDesconto = (preco * quantidade) + sobremesaValor;
         if (totalSemDesconto > 100) {
             desconto = 0.90; //10%
-        } else if ((totalSemDesconto < 100) && (totalSemDesconto > 50)) {
+        } else if ((totalSemDesconto <= 100) && (totalSemDesconto => 50)) {
             desconto = 0.95; //5%
         } else {
             desconto = 1;
